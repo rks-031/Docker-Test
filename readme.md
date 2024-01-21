@@ -26,6 +26,6 @@ docker stop container_id
 # exposing ports
 
 docker run -d -p 8080:80 nginx:latest
-{0.0.0.0:8080->80/tcp}
+{0.0.0.0:8080->80/tcp} <br/>{Baiscally we are mapping the host port 8080 to container port 80}<br/>
 `Now open any browser and write localhost:8080 as the url`
 ![Broswer Screenshot localost:8080](image.png)
