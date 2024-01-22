@@ -71,3 +71,13 @@ Between Host and containers.<br/>
 Between containers.
 
 ![Alt text](image-1.png)
+
+# Volume Between Host and Container
+
+![Alt text](image-2.png)
+cd `path to directory` <br/>
+docker run --name website -v $(pwd) -d -p 8080:80 nginx <br/>
+<br/>
+docker run --name website -v ${PWD}:/usr/share/nginx/html:ro -d -p 8080:80 nginx
+<br/>
+`Format`: docker run --name some-nginx -v /some/content:/usr/share/nginx/html:ro -d nginx
