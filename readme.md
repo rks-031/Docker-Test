@@ -63,3 +63,11 @@ docker ps --format="ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.
 $env:FORMAT = "ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
 <br/>
 docker ps --format $env:FORMAT
+
+# Volumes
+
+Allows sharing of data. Files or Folders.<br/>
+Between Host and containers.<br/>
+Between containers.
+
+![Alt text](image-1.png)
