@@ -46,4 +46,20 @@ docker start vibrant_liskov
 
 docker ps --help
 
-#
+# forcefully remove a container before stopping it
+
+docker rm -f $(docker ps -aq)
+
+# naming a container
+
+docker run --name website -d -p 3000:80 -p 8080:80 nginx:latest
+
+# formatting the way in which dtails of container should appear
+
+docker ps --format="ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
+
+# giving the format a name
+
+$env:FORMAT = "ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
+<br/>
+docker ps --format $env:FORMAT
