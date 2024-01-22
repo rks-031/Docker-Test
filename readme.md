@@ -81,3 +81,7 @@ docker run --name website -v $(pwd) -d -p 8080:80 nginx <br/>
 docker run --name website -v ${PWD}:/usr/share/nginx/html:ro -d -p 8080:80 nginx
 <br/>
 `Format`: docker run --name some-nginx -v /some/content:/usr/share/nginx/html:ro -d nginx
+
+# Execute the container in interactive mode
+
+docker exec -it website bash
